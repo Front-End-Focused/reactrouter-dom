@@ -5,9 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(var(--bs-light-rgb));
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sidebar a {
+  text-decoration: none;
+  margin: 0 0 .5rem 0;
+    display: block;
+    color: inherit;
+}
+
+.sidebar a.active {
+  color: var(--bs-blue)
 }
