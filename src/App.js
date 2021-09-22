@@ -6,6 +6,8 @@ import Assets from "./components/Assets";
 import Guide from "./components/Guide";
 import Projects from "./components/Projects";
 import PrivatePage from "./components/PrivatePage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -53,7 +55,8 @@ function App() {
                 <Route path="/guide" component={Guide} />
                 <Route path="/assets" component={Assets} />
                 <Route path="/projects" component={Projects} />
-                <Route path="/private" component={PrivatePage} />
+                <ProtectedRoute path='/private' component={PrivatePage} isLoggeIn={true} />
+                <Route path='/login' component={Login}/>
                 {/* <Route to="/">
                   <h1 className="display-5">Welcome to Manage!</h1>
                 </Route> */}
