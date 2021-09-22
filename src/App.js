@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./App.css";
 import Inbox from "./components/Inbox";
 import Today from "./components/Today";
@@ -20,10 +21,10 @@ function App() {
           <aside className="col-3 sidebar">
             <ul className="list-unstyled fs-5">
               <li>
-                <a href="/">Inbox</a>
+                <Link to="/inbox">Inbox</Link>
               </li>
               <li>
-                <a href="/">Today</a>
+                <Link to="/today">Today</Link>
               </li>
             </ul>
             <hr />
@@ -31,16 +32,16 @@ function App() {
             <hr />
             <ul className="list-unstyled fs-5 mt-3">
               <li>
-                <a href="/">Projects</a>
+                <Link to="/projects">Projects</Link>
               </li>
               <li>
-                <a href="/">Guide</a>
+                <Link to="/guide">Guide</Link>
               </li>
               <li>
-                <a href="/">Assets</a>
+                <Link to="/assets">Assets</Link>
               </li>
               <li>
-                <a href="/">Important</a>
+                <Link to="/private">Important</Link>
               </li>
             </ul>
           </aside>
