@@ -1,4 +1,4 @@
-import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom";
 
 function Projects() {
   let { path, url } = useRouteMatch();
@@ -9,31 +9,31 @@ function Projects() {
       <div className="row">
         <div className="col-4">
           <div className="list-group">
-            <Link
+            <NavLink
               to={`${url}/batman`}
               className="list-group-item list-group-item-action"
               aria-current="true"
             >
               Batman
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to={`${url}/15-five`}
               className="list-group-item list-group-item-action"
             >
               15 Five
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to={`${url}/the-network`}
               className="list-group-item list-group-item-action"
             >
               The Network
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to={`${url}/canary`}
               className="list-group-item list-group-item-action"
             >
               Canary
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="col-8">

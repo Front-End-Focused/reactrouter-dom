@@ -1,4 +1,4 @@
-import { Link, Switch, Route } from "react-router-dom";
+import { NavLink, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Inbox from "./components/Inbox";
 import Today from "./components/Today";
@@ -21,10 +21,10 @@ function App() {
           <aside className="col-3 sidebar">
             <ul className="list-unstyled fs-5">
               <li>
-                <Link to="/inbox">Inbox</Link>
+                <NavLink to="/inbox">Inbox</NavLink>
               </li>
               <li>
-                <Link to="/today">Today</Link>
+                <NavLink to="/today">Today</NavLink>
               </li>
             </ul>
             <hr />
@@ -32,16 +32,16 @@ function App() {
             <hr />
             <ul className="list-unstyled fs-5 mt-3">
               <li>
-                <Link to="/projects">Projects</Link>
+                <NavLink to="/projects">Projects</NavLink>
               </li>
               <li>
-                <Link to="/guide">Guide</Link>
+                <NavLink to="/guide">Guide</NavLink>
               </li>
               <li>
-                <Link to="/assets">Assets</Link>
+                <NavLink to="/assets">Assets</NavLink>
               </li>
               <li>
-                <Link to="/private">Important</Link>
+                <NavLink to="/private">Important</NavLink>
               </li>
             </ul>
           </aside>
