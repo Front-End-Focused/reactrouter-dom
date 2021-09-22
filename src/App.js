@@ -54,6 +54,15 @@ function App() {
                 <Route path="/assets" component={Assets} />
                 <Route path="/projects" component={Projects} />
                 <Route path="/private" component={PrivatePage} />
+                {/* <Route to="/">
+                  <h1 className="display-5">Welcome to Manage!</h1>
+                </Route> */}
+                {/* <Route
+                  to="/"
+                  render={() => (
+                    <h1 className="display-5">Welcome to Manage!</h1>
+                  )}
+                /> */}
               </Switch>
             </div>
           </section>
