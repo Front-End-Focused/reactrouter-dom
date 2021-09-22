@@ -10,26 +10,38 @@ function Projects() {
         <div className="col-4">
           <div className="list-group">
             <NavLink
-              to={`${url}/batman`}
+              to={{
+                pathName: `${url}/batman`,
+                tittle: "Batman"
+              }}
               className="list-group-item list-group-item-action"
               aria-current="true"
             >
               Batman
             </NavLink>
             <NavLink
-              to={`${url}/15-five`}
+              to={{
+                pathName: `${url}/15-five`,
+                tittle: "15-five"
+              }}
               className="list-group-item list-group-item-action"
             >
               15 Five
             </NavLink>
             <NavLink
-              to={`${url}/the-network`}
+              to={{
+                pathname: `${url}/the-network`,
+                tittle: "The-network"
+              }}
               className="list-group-item list-group-item-action"
             >
               The Network
             </NavLink>
             <NavLink
-              to={`${url}/canary`}
+              to={{
+                pathname: `${url}/canary`,
+                tittle: "Canary"
+              }}
               className="list-group-item list-group-item-action"
             >
               Canary
@@ -38,10 +50,7 @@ function Projects() {
         </div>
         <div className="col-8">
           <Switch>
-            <Route path={`${path}/batman`} component={Batman} />
-            <Route path={`${path}/15-five`} component={Five15} />
-            <Route path={`${path}/the-network`} component={TheNetwork} />
-            <Route path={`${path}/canary`} component={Canary} />
+            <Route path={`${path}/:projectName`} component={Project} />
             <Route path={path}>
               <h3>Please select project</h3>
             </Route>
@@ -52,46 +61,10 @@ function Projects() {
   );
 }
 
-function Batman() {
+function Project(props) {
   return (
     <div>
-      <h3>Batman</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
-        Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
-        excepturi reiciendis error. Culpa aliquam voluptate iste illum magni.
-      </p>
-    </div>
-  );
-}
-function TheNetwork() {
-  return (
-    <div>
-      <h3>The Network</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
-        Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
-        excepturi reiciendis error. Culpa aliquam voluptate iste illum magni.
-      </p>
-    </div>
-  );
-}
-function Canary() {
-  return (
-    <div>
-      <h3>Canary</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
-        Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
-        excepturi reiciendis error. Culpa aliquam voluptate iste illum magni.
-      </p>
-    </div>
-  );
-}
-function Five15() {
-  return (
-    <div>
-      <h3>15 Five</h3>
+      <h3>{props.location.tittle}</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
         Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
