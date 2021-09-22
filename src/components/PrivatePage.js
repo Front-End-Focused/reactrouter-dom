@@ -1,9 +1,9 @@
 function PrivatePage() {
   return (
     <div id="important">
-      <h1 className="display-5">Important</h1>
-      <p>You must log in to view this page!</p>
-      <a href="/">Login</a>
+      <h1 className="display-5">YES!</h1>
+      <p>you are already logged in!</p>
+
     </div>
   );
 }
