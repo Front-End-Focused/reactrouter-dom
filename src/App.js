@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Inbox from "./components/Inbox";
 import Today from "./components/Today";
@@ -47,12 +47,14 @@ function App() {
           </aside>
           <section className="col-9">
             <div className="shadow-lg p-5 bg-body rounded">
-              <Inbox />
-              <Today />
-              <Assets />
-              <Guide />
-              <Projects />
-              <PrivatePage />
+              <Switch>
+                <Route path="/inbox" component={Inbox} />
+                <Route path="/today" component={Today} />
+                <Route path="/guide" component={Guide} />
+                <Route path="/assets" component={Assets} />
+                <Route path="/projects" component={Projects} />
+                <Route path="/private" component={PrivatePage} />
+              </Switch>
             </div>
           </section>
         </div>
