@@ -17,20 +17,33 @@ function Projects() {
               Batman
             </NavLink>
             <NavLink
-              to={`${url}/15-five`}
+              to={{
+                pathname: `${url}/15-five`,
+                title: "Canary"
+              }}
               className="list-group-item list-group-item-action"
             >
+
               15 Five
             </NavLink>
             <NavLink
-              to={`${url}/the-network`}
+              to={{
+                pathname: `${url}/15-five`,
+                title: "Canary"
+              }}
               className="list-group-item list-group-item-action"
+
             >
+
               The Network
             </NavLink>
             <NavLink
-              to={`${url}/canary`}
+              to={{
+                pathname: `${url}/15-five`,
+                title: "Canary"
+              }}
               className="list-group-item list-group-item-action"
+
             >
               Canary
             </NavLink>
@@ -38,10 +51,7 @@ function Projects() {
         </div>
         <div className="col-8">
           <Switch>
-            <Route path={`${path}/batman`} component={Batman} />
-            <Route path={`${path}/15-five`} component={Five15} />
-            <Route path={`${path}/the-network`} component={TheNetwork} />
-            <Route path={`${path}/canary`} component={Canary} />
+            <Route path={`${path}/:projectName`} component={Project} />
             <Route path={path}>
               <h3>Please select project</h3>
             </Route>
@@ -52,10 +62,10 @@ function Projects() {
   );
 }
 
-function Batman() {
+function Project(props) {
   return (
     <div>
-      <h3>Batman</h3>
+      <h3>{props.location.title}</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
         Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
@@ -63,42 +73,10 @@ function Batman() {
       </p>
     </div>
   );
-}
-function TheNetwork() {
-  return (
-    <div>
-      <h3>The Network</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
-        Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
-        excepturi reiciendis error. Culpa aliquam voluptate iste illum magni.
-      </p>
-    </div>
-  );
-}
-function Canary() {
-  return (
-    <div>
-      <h3>Canary</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
-        Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
-        excepturi reiciendis error. Culpa aliquam voluptate iste illum magni.
-      </p>
-    </div>
-  );
-}
-function Five15() {
-  return (
-    <div>
-      <h3>15 Five</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, vel!
-        Repellat laborum corporis ex rem facilis sint. Hic, minus numquam at
-        excepturi reiciendis error. Culpa aliquam voluptate iste illum magni.
-      </p>
-    </div>
-  );
-}
+};
+
+
+
+
 
 export default Projects;
