@@ -8,4 +8,5 @@ function PrivatePage() {
   );
 }
 
+
 export default PrivatePage;
